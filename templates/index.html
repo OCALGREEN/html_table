@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <title>HTML Table</title>
+</head>
+
+<body>
+
+<!--
+    {% for dict in users %} dict == the dictionaries in the list
+        {% for keys in dict %} keys == the keys in the dictionaries
+            {% for values in dict[keys] %} values == the values in the dictionaries
+                <h1> {{ values }} </h1>
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+-->
+
+
+<table> 
+    {% for x in users %} <!--x == dictionaries-->
+        {% for y in x %} <!--y == the keys-->
+            {% for z in x[y] %} <!--z == the values-->
+            <tr>
+                <td>{{ z }}</td>
+            </tr>    
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+</table>
+
+    <!-- <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </tr>
+        <tr>
+            <td>Michael</td>
+            <td>John</td>
+            <td>Mark</td>
+            <td>KB</td>
+        </tr>
+        <tr>
+            <td>Choi</td>
+            <td>Supsupin</td>
+            <td>Guillen</td>
+            <td>Tonel</td>
+        </tr>
+        <tr>
+            <td>Michael Choi</td>
+            <td>John Supsupin</td>
+            <td>Mark Guillen</td>
+            <td>KB Tonel</td>
+        </tr>
+    </table> -->
+</body>
+</html>
