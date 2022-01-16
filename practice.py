@@ -6,11 +6,21 @@ users = [
     {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
 
-size = len(users)
-list_keys = []
 
+print(users[0]['first_name'])
 
+# print(" ")
+# for x in users:
+#     print(x['first_name'])
 
-for m in users: # m == every dictionary in the list User
-    for k in m: # k == every key in the each dictionary
-        print(m['first_name']) # m[k] == every value for every key
+# print(" ")
+# for x in users:
+#     print(x['last_name'])
+
+# print(" ")
+# for x in users:
+#     print(x['first_name'], " ", x['last_name'])
+
+# for m in users: # m == every dictionary in the list User
+#     for k in m: # k == every key in the each dictionary
+#         print(m['first_name']) # m[k] == every value for every key
